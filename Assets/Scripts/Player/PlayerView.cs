@@ -1,7 +1,5 @@
 ﻿using StatePattern.Enemy;
-using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace StatePattern.Player
 {
@@ -9,6 +7,7 @@ namespace StatePattern.Player
     {
         public PlayerController Controller { get; private set; }
         [SerializeField] private ParticleSystem attackVFX;
+        [SerializeField] private Animator animator;
 
         public Rigidbody Rigidbody { get; private set; }
 
@@ -22,7 +21,23 @@ namespace StatePattern.Player
 
         public void TakeDamage(int damage) => Controller.TakeDamage(damage);
 
-        public void PlayAttackVFX() => attackVFX.Play();
+        private void PlayAttackVFX() => attackVFX.Play();
+
+        private void PlayAttackAnimation() => animator.SetTrigger("attack");
+
+        public void Attack(){
+            PlayAttackVFX();
+            PlayAttackAnimation();
+        }
+
+        public void Move(Vector3 position){
+            Rigidbody.MovePosition(position);
+            PlayMovementAnimation(false);
+        }
+
+        public void PlayMovementAnimation(bool isIdle) => animator.SetBool("isIdle", isIdle);
+
+        public void PlayDeathAnimation() => animator.SetTrigger("death");
 
         private void OnTriggerEnter(Collider other)
         {

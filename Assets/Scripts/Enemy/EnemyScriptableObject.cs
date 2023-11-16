@@ -1,5 +1,4 @@
 using StatePattern.Enemy.Bullet;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,5 +25,6 @@ namespace StatePattern.Enemy
 
         public List<Vector3> PatrollingPoints;
         public float PlayerStoppingDistance;
+        public int DelayAfterGameEnd;
     }
 }

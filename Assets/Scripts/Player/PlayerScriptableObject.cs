@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace StatePattern.Player
 {
@@ -12,6 +11,6 @@ namespace StatePattern.Player
         public float MovementSpeed;
         public float RotationSpeed;
         public int MaximumHealth;
-
+        public int DelayAfterDeath;
     }
 }

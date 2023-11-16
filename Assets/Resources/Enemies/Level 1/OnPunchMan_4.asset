@@ -27,3 +27,4 @@ MonoBehaviour:
   RateOfFire: 1
   PatrollingPoints: []
   PlayerStoppingDistance: 0
+  DelayAfterGameEnd: 1

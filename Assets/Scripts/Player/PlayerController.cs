@@ -2,8 +2,8 @@
 using StatePattern.Main;
 using StatePattern.Sound;
 using StatePattern.UI;
-using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 namespace StatePattern.Player
@@ -44,7 +44,7 @@ namespace StatePattern.Player
 
         public void UpdatePlayer()
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Space) && currentHealth > 0)
                 UpdateAttack();
         }
 
@@ -52,15 +52,19 @@ namespace StatePattern.Player
 
         private void UpdateMovement()
         {
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-            float verticalInput = Input.GetAxisRaw("Vertical");
+            if(currentHealth > 0){
+                float horizontalInput = Input.GetAxisRaw("Horizontal");
+                float verticalInput = Input.GetAxisRaw("Vertical");
 
-            Vector3 movementDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+                Vector3 movementDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
 
-            if(movementDirection != Vector3.zero)
-            {
-                RotatePlayer(movementDirection);
-                MovePlayer(movementDirection);
+                if(movementDirection != Vector3.zero)
+                {
+                    RotatePlayer(movementDirection);
+                    MovePlayer(movementDirection);
+                }else{
+                    playerView.PlayMovementAnimation(true);
+                }
             }
         }
 
@@ -74,19 +78,19 @@ namespace StatePattern.Player
 
         private Vector3 CalculateRotationToSet(float targetRotation) => Vector3.up * Mathf.MoveTowardsAngle(playerView.transform.eulerAngles.y, targetRotation, playerScriptableObject.RotationSpeed * Time.deltaTime);
 
-        private void MovePlayer(Vector3 movementDirection)
-        {
-            Vector3 moveVector = GetMovementVector(movementDirection);
-            playerView.Rigidbody.MovePosition(GetPositionToMoveAt(moveVector));
-        }
-
         private Vector3 GetMovementVector(Vector3 movementDirection) => Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f) * movementDirection;
 
         private Vector3 GetPositionToMoveAt(Vector3 moveVector) => playerView.Rigidbody.position + moveVector * playerScriptableObject.MovementSpeed * Time.deltaTime;
 
+        private void MovePlayer(Vector3 movementDirection)
+        {
+            Vector3 moveVector = GetMovementVector(movementDirection);
+            playerView.Move(GetPositionToMoveAt(moveVector));
+        }
+
         private void UpdateAttack()
         {
-            playerView.PlayAttackVFX();
+            playerView.Attack();
             if (enemiesInRange.Count > 0)
             {
                SoundService.PlaySoundEffects(SoundType.PLAYER_ATTACK);
@@ -115,9 +119,11 @@ namespace StatePattern.Player
             UIService.UpdatePlayerHealth((float)currentHealth / playerScriptableObject.MaximumHealth);
         }
 
-        private void PlayerDied()
+        private async void PlayerDied()
         {
+            playerView.PlayDeathAnimation();
             SoundService.PlaySoundEffects(SoundType.GAME_LOST);
+            await Task.Delay(playerScriptableObject.DelayAfterDeath * 1000); // converting to milliseconds
             UIService.GameLost();
         }
 

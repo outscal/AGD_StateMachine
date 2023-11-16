@@ -8,7 +8,7 @@ namespace StatePattern.UI
     {
         private GameplayUIController controller;
         [SerializeField] private TextMeshProUGUI enemyCounterText;
-        [SerializeField] private Image playerHealth;
+        [SerializeField] private Slider playerHealthSlider;
         [SerializeField] private GameObject EnemyKillOverlay;
 
         public void SetController(IUIController controllerToSet) => controller = controllerToSet as GameplayUIController;
@@ -19,7 +19,7 @@ namespace StatePattern.UI
 
         public void UpdateEnemyCounterText(string enemyCounter) => enemyCounterText.SetText(enemyCounter);
 
-        public void UpdatePlayerHealthUI(float helathRatio) => playerHealth.transform.localScale = new Vector3(helathRatio, 1, 1);
+        public void UpdatePlayerHealthUI(float healthRatio) => playerHealthSlider.value = healthRatio;
 
         public void ToggleKillOverlay(bool value) => EnemyKillOverlay.SetActive(value);
     }

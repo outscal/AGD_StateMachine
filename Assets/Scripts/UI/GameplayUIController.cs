@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
-
-namespace StatePattern.UI
+﻿namespace StatePattern.UI
 {
     public class GameplayUIController : IUIController
     {

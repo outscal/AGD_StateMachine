@@ -1,5 +1,4 @@
 using StatePattern.Main;
-using UnityEngine;
 
 namespace StatePattern.Player
 {
