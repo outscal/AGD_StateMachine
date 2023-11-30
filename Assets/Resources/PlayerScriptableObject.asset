@@ -18,3 +18,5 @@ MonoBehaviour:
   MovementSpeed: 5
   RotationSpeed: 500
   MaximumHealth: 100
+  MeleeDamage: 25
+  DelayAfterDeath: 1

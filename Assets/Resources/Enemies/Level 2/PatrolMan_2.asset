@@ -20,6 +20,8 @@ MonoBehaviour:
   MovementSpeed: 1.5
   MaximumHealth: 10
   RangeRadius: 6
+  RangeAngle: 60
+  RangeTeleporting: 0
   IdleTime: 3
   RotationSpeed: 100
   RotationThreshold: 0.5
@@ -32,4 +34,13 @@ MonoBehaviour:
   - {x: -3, y: 1.5, z: 1}
   - {x: -8, y: 1.5, z: 3}
   - {x: -5, y: 1.5, z: 7}
-  PlayerStoppingDistance: 2
+  PlayerAttackingDistance: 3
+  CloneCount: 0
+  DelayAfterGameEnd: 0
+  SlowPlayerDownDuration: 0
+  BossWave: []
+  FireBreathDamage: 0
+  QuadrupleAttackDamage: 0
+  dropData:
+  - {fileID: 11400000, guid: 974a54275d9ba9f4bb5edadff384a8e6, type: 2}
+  - {fileID: 11400000, guid: 503175277b16ed244bfa6703d3e3b67c, type: 2}

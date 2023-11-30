@@ -26,12 +26,20 @@ MonoBehaviour:
   - soundType: 5
     audio: {fileID: 8300000, guid: 8bc7ea046a3d84b4899925d9f0f7fa19, type: 3}
   - soundType: 6
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 610c8b4c51ad04b4eb90fba3a443c1f5, type: 3}
   - soundType: 7
     audio: {fileID: 0}
   - soundType: 8
     audio: {fileID: 8300000, guid: e0cb1b7b74bc46a4fb8bc9fb57bec992, type: 3}
-  - soundType: 9
-    audio: {fileID: 8300000, guid: 71973c0d898f2f94287dda0eaee8911e, type: 3}
   - soundType: 10
+    audio: {fileID: 8300000, guid: ebf6f741bfb8afd43819fdd8c21e59ae, type: 3}
+  - soundType: 13
+    audio: {fileID: 8300000, guid: 71973c0d898f2f94287dda0eaee8911e, type: 3}
+  - soundType: 14
     audio: {fileID: 8300000, guid: 03f8331277268204d906937522ecf220, type: 3}
+  - soundType: 9
+    audio: {fileID: 8300000, guid: 610c8b4c51ad04b4eb90fba3a443c1f5, type: 3}
+  - soundType: 11
+    audio: {fileID: 8300000, guid: 8ed15d99a5fdbc7499f422e4ad1dbef7, type: 3}
+  - soundType: 12
+    audio: {fileID: 8300000, guid: 4cb1b484f1e90b7458b61027e990a31e, type: 3}

@@ -27,7 +27,7 @@ namespace StatePattern.Sound
                 audioEffects.PlayOneShot(clip);
             }
             else
-                Debug.LogError("No Audio Clip selected.");
+                Debug.LogError($"No Audio Clip selected for sound type: {soundType}");
         }
 
         private void PlaybackgroundMusic(SoundType soundType, bool loopSound = false)
