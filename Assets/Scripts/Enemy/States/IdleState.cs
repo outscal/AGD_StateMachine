@@ -8,7 +8,7 @@ namespace StatePattern.Enemy
     public class IdleState : IState
     {
         public EnemyController Owner { get; set; }
-        private IStateMachine stateMachine ;
+        private IStateMachine stateMachine;
         private float timer;
 
         public IdleState(IStateMachine stateMachine) => this.stateMachine = stateMachine;
