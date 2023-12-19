@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using StatePattern.StateMachine;
 
 namespace StatePattern.Enemy
 {
@@ -46,6 +47,8 @@ namespace StatePattern.Enemy
     {
         IDLE,
         ROTATING,
-        SHOOTING
+        SHOOTING,
+        PATROLLING,
+        CHASING
     }
 }
