@@ -46,6 +46,8 @@ namespace StatePattern.Enemy
     {
         IDLE,
         ROTATING,
-        SHOOTING
+        SHOOTING,
+        PATROLLING,
+        CHASING
     }
 }
