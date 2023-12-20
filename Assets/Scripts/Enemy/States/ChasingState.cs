@@ -6,13 +6,13 @@ using UnityEngine;
 
 namespace StatePattern.Enemy
 {
-    public class ChasingState : IState
+    public class ChasingState<T> : IState where T : EnemyController
     {
         public EnemyController Owner { get; set; }
-        private IStateMachine stateMachine;
+        private GenericStateMachine<T> stateMachine;
         private PlayerController target;
 
-        public ChasingState(IStateMachine stateMachine) => this.stateMachine = stateMachine;
+        public ChasingState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
 
         public void OnStateEnter()
         {
