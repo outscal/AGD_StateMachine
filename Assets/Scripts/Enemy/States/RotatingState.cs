@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace StatePattern.Enemy
 {
-    public class RotatingState : IState
+    public class RotatingState<T> : IState where T : EnemyController
     {
         public EnemyController Owner { get; set; }
-        private IStateMachine stateMachine;
+        private GenericStateMachine<T> stateMachine;
         private float targetRotation;
 
-        public RotatingState(IStateMachine stateMachine) => this.stateMachine = stateMachine;
+        public RotatingState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
 
         public void OnStateEnter() => targetRotation = (Owner.Rotation.eulerAngles.y + 180) % 360;
 
