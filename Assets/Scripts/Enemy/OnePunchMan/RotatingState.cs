@@ -1,9 +1,10 @@
 ﻿using StatePattern.Enemy;
+using StatePattern.StateMachine;
 using UnityEngine;
 
 public class RotatingState : IState
 {
-    public OnePunchManController Owner { get; set; }
+    public EnemyController Owner { get; set; }
     private OnePunchManStateMachine stateMachine;
     private float targetRotation;
 
@@ -16,7 +17,7 @@ public class RotatingState : IState
         // Calculate and set the character's rotation based on the target rotation.
         Owner.SetRotation(CalculateRotation());
         if (IsRotationComplete())
-            stateMachine.ChangeState(OnePunchManStates.IDLE);
+            stateMachine.ChangeState(States.IDLE);
     }
 
     public void OnStateExit() => targetRotation = 0;

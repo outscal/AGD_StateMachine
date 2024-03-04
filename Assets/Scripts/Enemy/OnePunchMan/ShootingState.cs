@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class ShootingState : IState
 {
-    public OnePunchManController Owner { get; set; }
+    public EnemyController Owner { get ; set; }
+
     private OnePunchManStateMachine stateMachine;
     private PlayerController target;
     private float shootTimer;
