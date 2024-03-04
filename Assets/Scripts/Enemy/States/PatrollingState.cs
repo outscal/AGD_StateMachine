@@ -1,4 +1,5 @@
 ﻿using StatePattern.StateMachine;
+using System.Collections;
 using UnityEngine;
 
 namespace StatePattern.Enemy
@@ -6,7 +7,6 @@ namespace StatePattern.Enemy
     public class PatrollingState : IState
     {
         public EnemyController Owner { get; set; }
-
         private IStateMachine stateMachine;
         private int currentPatrollingIndex = -1;
         private Vector3 destination;
