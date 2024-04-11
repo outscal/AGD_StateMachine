@@ -35,3 +35,7 @@ MonoBehaviour:
     audio: {fileID: 8300000, guid: 71973c0d898f2f94287dda0eaee8911e, type: 3}
   - soundType: 10
     audio: {fileID: 8300000, guid: 03f8331277268204d906937522ecf220, type: 3}
+  - soundType: 10
+    audio: {fileID: 8300000, guid: 03f8331277268204d906937522ecf220, type: 3}
+  - soundType: 8
+    audio: {fileID: 8300000, guid: 6fc682ce3152fcc4fa62392f3debd7ca, type: 3}

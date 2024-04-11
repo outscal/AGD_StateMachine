@@ -57,6 +57,8 @@ namespace StatePattern.UI
 
         public void UpdateEnemyCount(int activeEnemies, int totalEnemies) => gameplayController.SetEnemyCount(activeEnemies, totalEnemies);
 
+        public void UpdateCointCount() => gameplayController.SetCoinCount();
+
         private void OnDestroy() => UnsubscribeToEvents();
     }
 }

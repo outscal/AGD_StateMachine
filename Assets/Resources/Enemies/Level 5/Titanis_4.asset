@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1594681ca05b1e47a6918e6f825a6e0, type: 3}
+  m_Name: Titanis_4
+  m_EditorClassIdentifier: 
+  LevelID: 5
+  EnemyPrefab: {fileID: 948247519368844738, guid: 8e04b3eddd04e8f4b9b0c759afc64d07, type: 3}
+  Type: 4
+  SpawnPosition: {x: -1, y: 1.5, z: 10}
+  SpawnRotation: {x: 0, y: -90, z: 0}
+  MovementSpeed: 1.5
+  MaximumHealth: 10
+  RangeRadius: 6
+  IdleTime: 3
+  RotationSpeed: 100
+  RotationThreshold: 0.5
+  BulletData: {fileID: 11400000, guid: cfa5b8d473156f34f8a4255079c7aaa0, type: 2}
+  RateOfFire: 1
+  PatrollingPoints:
+  - {x: 8, y: 1.5, z: 10}
+  - {x: -1, y: 1.5, z: 10}
+  PlayerStoppingDistance: 3
+  CloneCount: 2
+  ObstacleLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  ObstacleDistance: 0.5

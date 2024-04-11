@@ -234,6 +234,7 @@ MonoBehaviour:
   - Type: 2
     Color: {r: 0.032125473, g: 0, b: 1, a: 1}
   bloodStain: {fileID: 2531642671473160316, guid: efa600927a40a5547a583186d52428d4, type: 3}
+  coinPrefab: {fileID: 7561452385218145364, guid: d535ee0ac2ee8e04aa9de1837a217e2f, type: 3}
 --- !u!135 &3773479111711626245
 SphereCollider:
   m_ObjectHideFlags: 0

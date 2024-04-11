@@ -8,6 +8,10 @@ namespace StatePattern.StateMachine
         PATROLLING,
         CHASING,
         TELEPORTING,
-        CLONING
+        CLONING,
+        RAMPAGE,
+        ROARING,
+        CHARGE,
+        DEFENSE
     }
 }

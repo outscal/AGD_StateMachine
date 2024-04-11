@@ -3,6 +3,7 @@ using StatePattern.Player;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Coins;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -18,11 +19,19 @@ namespace StatePattern.Enemy
         [SerializeField] private ParticleSystem muzzleFlash;
         [SerializeField] private List<EnemyColor> enemyColors;
         [SerializeField] private GameObject bloodStain;
+        [SerializeField] private int maxSpawnCoins = 5;
+        [SerializeField] private CoinView coinPrefab;
+        [SerializeField] private ParticleSystem attackVFX;
 
+        private GameObject spawnedStain;
+
+        private void SubsribeToEvent() => GameService.Instance.EventService.OnLevelEnded.AddListener(DestroyBloodStain);
+        
         private void Start()
         {
             rangeTriggerCollider = GetComponent<SphereCollider>();
             Controller?.InitializeAgent();
+            SubsribeToEvent();
         }
 
         public void SetController(EnemyController controllerToSet) => Controller = controllerToSet;
@@ -66,8 +75,17 @@ namespace StatePattern.Enemy
 
             yield return new WaitForSeconds(0.1f);
 
-            var blood = Instantiate(bloodStain);
-            blood.transform.position = transform.position;
+            spawnedStain = Instantiate(bloodStain);
+            spawnedStain.transform.position = transform.position;
+
+            for (int i = 0; i < maxSpawnCoins; i++)
+            {
+                CoinView coin = Instantiate(coinPrefab);
+                int mult = Random.Range(-1, 1);
+                coin.transform.position = transform.position +
+                                          (mult* new Vector3(i*0.1f, 0, i*0.1f));
+            }
+            
             Controller.ToggleKillOverlay(false);
 
             Destroy(gameObject);
@@ -84,6 +102,10 @@ namespace StatePattern.Enemy
             enemyColors.Remove(enemyColors.Find(item => item.Type == EnemyColorType.Default));
             enemyColors.Add(coloToSetAsDefault);
         }
+
+        public void DestroyBloodStain() => Destroy(spawnedStain);
+
+        public void PlayVFX() => attackVFX.Play();
     }
 
     [System.Serializable]
@@ -97,6 +119,7 @@ namespace StatePattern.Enemy
     {
         Default,
         Vulnerable,
-        Clone
+        Clone,
+        Defense
     }
 }

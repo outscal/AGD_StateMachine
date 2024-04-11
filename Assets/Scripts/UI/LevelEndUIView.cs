@@ -10,6 +10,7 @@ namespace StatePattern.UI
         [SerializeField] private TextMeshProUGUI resultText;
         [SerializeField] private Button homeButton;
         [SerializeField] private Button quitButton;
+        [SerializeField] private Button nextButton;
 
         private void Start() => SubscribeToButtonClicks();
 
@@ -17,6 +18,7 @@ namespace StatePattern.UI
         {
             homeButton.onClick.AddListener(controller.OnHomeButtonClicked);
             quitButton.onClick.AddListener(controller.OnQuitButtonClicked);
+            nextButton.onClick.AddListener(controller.OnNextButtonClicked);
         }
 
         public void SetController(IUIController controllerToSet) => controller = controllerToSet as LevelEndUIController;

@@ -14,6 +14,7 @@ namespace StatePattern.Player
         private PlayerView playerView;
 
         private int currentHealth;
+        public float MoveSpeed;
         private List<EnemyController> enemiesInRange;
         public Vector3 Position => playerView.transform.position;
         public UIService UIService => GameService.Instance.UIService;
@@ -23,9 +24,12 @@ namespace StatePattern.Player
         public PlayerController(PlayerScriptableObject playerScriptableObject)
         {
             this.playerScriptableObject = playerScriptableObject;
+            MoveSpeed = playerScriptableObject.MovementSpeed;
             InitializeView();
             InitializeVariables();
         }
+
+        public void DestroyPlayer() => Object.Destroy(playerView);
 
         private void InitializeView()
         {
@@ -82,7 +86,7 @@ namespace StatePattern.Player
 
         private Vector3 GetMovementVector(Vector3 movementDirection) => Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f) * movementDirection;
 
-        private Vector3 GetPositionToMoveAt(Vector3 moveVector) => playerView.Rigidbody.position + moveVector * playerScriptableObject.MovementSpeed * Time.deltaTime;
+        private Vector3 GetPositionToMoveAt(Vector3 moveVector) => playerView.Rigidbody.position + moveVector * (MoveSpeed * Time.deltaTime);
 
         private void UpdateAttack()
         {
@@ -124,5 +128,7 @@ namespace StatePattern.Player
         public void AddEnemy(EnemyController enemy) => enemiesInRange.Add(enemy);
             
         public void RemoveEnemy(EnemyController enemy) => enemiesInRange.Remove(enemy);
+        
+        public void ResetPlayerSpeed() => MoveSpeed = playerScriptableObject.MovementSpeed;
     }
 }

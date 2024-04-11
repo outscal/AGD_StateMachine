@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 884685302398091078}
   - component: {fileID: 3144638240252922764}
   - component: {fileID: 304851724567229972}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Obstacle_3_Prefab
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

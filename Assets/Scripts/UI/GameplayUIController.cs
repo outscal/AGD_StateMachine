@@ -7,7 +7,10 @@ namespace StatePattern.UI
     {
         private GameplayUIView gameplayView;
         private const string ENEMY_COUNTER_PREFIX = "Enemies Left:";
+        private const string COINS_PREFIX = "Coins : ";
 
+        private int coinCount;
+        
         public GameplayUIController(GameplayUIView gameplayView)
         {
             this.gameplayView = gameplayView;
@@ -20,6 +23,8 @@ namespace StatePattern.UI
         public void Hide() => gameplayView.DisableView();
 
         public void SetEnemyCount(int activeEnemies, int totalEnemies) => gameplayView.UpdateEnemyCounterText($"{ENEMY_COUNTER_PREFIX} {activeEnemies} / {totalEnemies}");
+
+        public void SetCoinCount() => gameplayView.UpdateCoinText($"{COINS_PREFIX}{++coinCount}");
 
         public void SetPlayerHealthUI(float healthRatio) => gameplayView.UpdatePlayerHealthUI(healthRatio);
 

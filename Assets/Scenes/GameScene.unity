@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: a489afba77ded7d42989ff99e08bc359, type: 2}
+--- !u!114 &165046305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3093090592263553667, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+  m_PrefabInstance: {fileID: 559994230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &559994230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,6 +141,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 624815447, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 624815449, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 165046305}
+    - target: {fileID: 2713401147876776565, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3873808189371141831, guid: de25749838c0a5a438314548ca5c239f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -229,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 3889939497049684082, guid: de25749838c0a5a438314548ca5c239f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3889939497241893142, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3889939497241893145, guid: de25749838c0a5a438314548ca5c239f, type: 3}
       propertyPath: m_SizeDelta.y
@@ -801,6 +828,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3ceefc333a7c35a4d8743f64f88754db, type: 2}
   - {fileID: 11400000, guid: 7c34e5ad108e2fe42992e2b182ef0931, type: 2}
   - {fileID: 11400000, guid: be7c349780d6ac14daa55dee0da426e2, type: 2}
+  - {fileID: 11400000, guid: a41c7c32902b4cc40bc1c849fd78f9dc, type: 2}
   sfxSource: {fileID: 629913882}
   bgMusicSource: {fileID: 973737936}
 --- !u!4 &2053379264
