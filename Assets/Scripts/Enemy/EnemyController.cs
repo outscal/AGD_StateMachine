@@ -13,10 +13,11 @@ namespace StatePattern.Enemy
 
         protected int currentHealth;
         protected EnemyState currentState;
-        protected NavMeshAgent Agent => enemyView.Agent;
+        public NavMeshAgent Agent => enemyView.Agent;
         public EnemyScriptableObject Data => enemyScriptableObject;
         public Quaternion Rotation => enemyView.transform.rotation;
         public Vector3 Position => enemyView.transform.position;
+        public Vector3 Target;
 
 
         public EnemyController(EnemyScriptableObject enemyScriptableObject)
@@ -73,7 +74,11 @@ namespace StatePattern.Enemy
 
         public void SetState(EnemyState stateToSet) => currentState = stateToSet;
 
-        public virtual void PlayerEnteredRange(PlayerController targetToSet) => GameService.Instance.SoundService.PlaySoundEffects(Sound.SoundType.ENEMY_ALERT);
+        public virtual void PlayerEnteredRange(PlayerController targetToSet)
+        {
+            Target = targetToSet.GetPlayerPosition();
+            GameService.Instance.SoundService.PlaySoundEffects(Sound.SoundType.ENEMY_ALERT);
+        }
 
         public virtual void PlayerExitedRange() { }
 

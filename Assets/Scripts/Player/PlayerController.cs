@@ -124,5 +124,7 @@ namespace StatePattern.Player
         public void AddEnemy(EnemyController enemy) => enemiesInRange.Add(enemy);
             
         public void RemoveEnemy(EnemyController enemy) => enemiesInRange.Remove(enemy);
+
+        public Vector3 GetPlayerPosition() => playerView.transform.position;
     }
 }
