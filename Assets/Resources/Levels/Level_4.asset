@@ -15,9 +15,9 @@ MonoBehaviour:
   ID: 4
   LevelPrefab: {fileID: 7721637791661695106, guid: 777fdd573095a8e4393748cdbdf11594, type: 3}
   EnemyScriptableObjects:
-  - {fileID: 11400000, guid: faecd11ed775db340b08a4d8ad8cc975, type: 2}
-  - {fileID: 11400000, guid: 47a99f9bbd907844ca6d3fc79027b5fb, type: 2}
-  - {fileID: 11400000, guid: c5e4713a96eb1f0418d384a468751cfb, type: 2}
-  - {fileID: 11400000, guid: 9f46e81c8dc5c4e4c84099d58372d6e3, type: 2}
-  - {fileID: 11400000, guid: 903db3e4c1a989a499747bbf568777bf, type: 2}
-  - {fileID: 11400000, guid: 99342d749241b384aaad2efd5b746733, type: 2}
+  - {fileID: 11400000, guid: a032fdbd04c926d4b8093538ffe5d2ae, type: 2}
+  - {fileID: 11400000, guid: d1a7f49b662d15541a00e8a3ed6323ed, type: 2}
+  - {fileID: 11400000, guid: b4c5914e077ee014ba79105e942c85ad, type: 2}
+  - {fileID: 11400000, guid: ca40c23eec4489a4d888929c201a1284, type: 2}
+  - {fileID: 11400000, guid: b4ba13ddb9d60ee49b963429db3db429, type: 2}
+  - {fileID: 11400000, guid: b0b2dc250cee4054ea6c35db3d3ce929, type: 2}

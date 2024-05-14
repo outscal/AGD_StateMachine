@@ -1,4 +1,5 @@
 ﻿using StatePattern.Enemy.Bullet;
+using StatePattern.Enemy.CloneMan;
 using StatePattern.Main;
 using StatePattern.Player;
 using UnityEngine;
@@ -50,7 +51,7 @@ namespace StatePattern.Enemy
         public virtual void Die() 
         {
             GameService.Instance.EnemyService.EnemyDied(this);
-            enemyView.Destroy();
+            enemyView?.Destroy();
         }
 
         public void ToggleKillOverlay(bool value) => GameService.Instance.UIService.ToggleKillOverlay(value);
@@ -64,7 +65,7 @@ namespace StatePattern.Enemy
         public void ToggleEnemyColor(bool value)=>  enemyView.ToggleColor(value);
         
 
-        public void Shoot()
+        public virtual void Shoot()
         {
             enemyView.PlayShootingEffect();
             GameService.Instance.SoundService.PlaySoundEffects(Sound.SoundType.ENEMY_SHOOT);

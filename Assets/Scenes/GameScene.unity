@@ -799,6 +799,8 @@ MonoBehaviour:
   levelScriptableObjects:
   - {fileID: 11400000, guid: bada358cc71564c49831629438d87724, type: 2}
   - {fileID: 11400000, guid: 3ceefc333a7c35a4d8743f64f88754db, type: 2}
+  - {fileID: 11400000, guid: 7c34e5ad108e2fe42992e2b182ef0931, type: 2}
+  - {fileID: 11400000, guid: be7c349780d6ac14daa55dee0da426e2, type: 2}
   sfxSource: {fileID: 629913882}
   bgMusicSource: {fileID: 973737936}
 --- !u!4 &2053379264
