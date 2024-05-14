@@ -1,18 +1,19 @@
 using StatePattern.Main;
 using StatePattern.Player;
 using StatePattern.StateMachine;
+using StatePattern.Utilities;
 using UnityEngine;
 
 namespace StatePattern.Enemy
 {
-    public class ShootingState : IState
+    public class ShootingState<T> : IState where T : EnemyController
     {
         public EnemyController Owner { get; set; }
-        private IStateMachine stateMachine;
+        private GenericStateMachine<T> stateMachine;
         private PlayerController target;
         private float shootTimer;
 
-        public ShootingState(IStateMachine stateMachine) => this.stateMachine = stateMachine;
+        public ShootingState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
 
         public void OnStateEnter()
         {

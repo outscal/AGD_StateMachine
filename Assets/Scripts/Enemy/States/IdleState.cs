@@ -1,15 +1,17 @@
+using StateMachine;
 using StatePattern.StateMachine;
+using StatePattern.Utilities;
 using UnityEngine;
 
 namespace StatePattern.Enemy
 {
-    public class IdleState : IState
+    public class IdleState<T> : IState where T : EnemyController
     {
         public EnemyController Owner { get; set; }
-        private IStateMachine stateMachine;
+        private GenericStateMachine<T> stateMachine;
         private float timer;
 
-        public IdleState(IStateMachine stateMachine) => this.stateMachine = stateMachine;
+        public IdleState(GenericStateMachine<T> stateMachine) => this.stateMachine = stateMachine;
 
         public void OnStateEnter() => ResetTimer();
 
