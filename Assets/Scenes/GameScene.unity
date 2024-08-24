@@ -130,6 +130,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 798054119, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 798054120, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_text
+      value: 'Game
+
+        Over'
+      objectReference: {fileID: 0}
+    - target: {fileID: 798054120, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 990850615, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 990850615, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 990850615, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 990850615, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906479242, guid: de25749838c0a5a438314548ca5c239f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3873808189371141831, guid: de25749838c0a5a438314548ca5c239f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -798,6 +832,9 @@ MonoBehaviour:
   playerScriptableObject: {fileID: 11400000, guid: 4240caefbf2e2f64eb8046b7c92646e0, type: 2}
   levelScriptableObjects:
   - {fileID: 11400000, guid: bada358cc71564c49831629438d87724, type: 2}
+  - {fileID: 11400000, guid: 3ceefc333a7c35a4d8743f64f88754db, type: 2}
+  - {fileID: 11400000, guid: 7c34e5ad108e2fe42992e2b182ef0931, type: 2}
+  - {fileID: 11400000, guid: be7c349780d6ac14daa55dee0da426e2, type: 2}
   sfxSource: {fileID: 629913882}
   bgMusicSource: {fileID: 973737936}
 --- !u!4 &2053379264

@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using StatePattern.Main;
-using StatePattern.Events;
 using StatePattern.Enemy;
 
 namespace StatePattern.Level

@@ -111,7 +111,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8285538388518601526}
-  m_Enabled: 0
+  m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5000001
   m_Speed: 1.5
@@ -143,6 +143,11 @@ MonoBehaviour:
   muzzleFlash: {fileID: 1895581332603329158}
   bloodStain: {fileID: 2531642671473160316, guid: efa600927a40a5547a583186d52428d4, type: 3}
   enemyGraphic: {fileID: 8285538390562885189}
+  enemyColors:
+  - Type: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Type: 1
+    Color: {r: 0.5943396, g: 0.22652188, b: 0.5590668, a: 1}
 --- !u!135 &5443418315836752591
 SphereCollider:
   m_ObjectHideFlags: 0

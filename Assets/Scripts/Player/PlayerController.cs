@@ -2,7 +2,6 @@
 using StatePattern.Main;
 using StatePattern.Sound;
 using StatePattern.UI;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

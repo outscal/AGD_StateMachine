@@ -17,7 +17,7 @@ MonoBehaviour:
   Type: 1
   SpawnPosition: {x: 7.5, y: 1.5, z: -10}
   SpawnRotation: {x: 0, y: -90, z: 0}
-  MovementSpeed: 5
+  MovementSpeed: 1.5
   MaximumHealth: 10
   RangeRadius: 6
   IdleTime: 3

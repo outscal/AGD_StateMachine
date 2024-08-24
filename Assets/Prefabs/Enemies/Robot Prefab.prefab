@@ -227,6 +227,13 @@ MonoBehaviour:
   muzzleFlash: {fileID: 3387942507893809082}
   bloodStain: {fileID: 2531642671473160316, guid: efa600927a40a5547a583186d52428d4, type: 3}
   enemyGraphic: {fileID: 948247519215704207}
+  enemyColors:
+  - Type: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Type: 1
+    Color: {r: 0.41509432, g: 0.18561764, b: 0.18561764, a: 1}
+  - Type: 2
+    Color: {r: 0, g: 0.011068348, b: 0.77254903, a: 1}
 --- !u!135 &3773479111711626245
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -309,9 +309,13 @@ MonoBehaviour:
   Agent: {fileID: 4250023737535591061}
   detectableRange: {fileID: 8422080348689439521}
   muzzleFlash: {fileID: 4951415841666850901}
-  bloodSplatter: {fileID: 0}
   bloodStain: {fileID: 2531642671473160316, guid: efa600927a40a5547a583186d52428d4, type: 3}
   enemyGraphic: {fileID: 4250023736550768601}
+  enemyColors:
+  - Type: 0
+    Color: {r: 1, g: 1, b: 1, a: 1}
+  - Type: 1
+    Color: {r: 0.7169812, g: 0.51676756, b: 0.51676756, a: 1}
 --- !u!135 &256093062051459923
 SphereCollider:
   m_ObjectHideFlags: 0
